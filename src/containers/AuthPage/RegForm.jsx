@@ -3,7 +3,7 @@ import React from 'react';
 import { useFormik } from 'formik';
 import styled from 'styled-components';
 
-import { BigButton } from '../Buttons/Buttons';
+import { BigButton } from '../../components/Buttons/Buttons';
 
 const InputCustom = styled.input`
 width:315px;
@@ -19,7 +19,7 @@ padding:8px;
 border-radius:5px;
 margin-top:24px;
 `
-const RegFormWrapper = styled.form`
+const Wrapper = styled.form`
 width:500px;
 display:flex;
 flex-direction:column;
@@ -41,7 +41,7 @@ export const RegForm = () => {
     },
   });
   return (
-    <RegFormWrapper onSubmit={formik.handleSubmit}>
+    <Wrapper onSubmit={formik.handleSubmit}>
       <div>
         <InputCustom
           type="date"
@@ -99,6 +99,6 @@ export const RegForm = () => {
         />
       </div>
       <BigButton type="submit">Зареєструватися</BigButton>
-    </RegFormWrapper>
+    </Wrapper>
   );
 };

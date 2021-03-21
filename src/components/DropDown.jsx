@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { ConfirmationButton, SmallButton } from './Buttons/Buttons';
 import { IoIosArrowDown as DownIcon } from "react-icons/io";
 import { IoIosArrowUp as UpIcon } from "react-icons/io";
-import { ModalCustom } from '../components/Form/Modal';
+import { Modal } from '../components/Modal';
 import { useDispatch } from 'react-redux';
 import { isAuthModalClose } from '../store/authSlice';
 
@@ -19,7 +19,6 @@ z-index:3;
 background:white;
 border:1px solid black;
 font-size:16px;
-
 `
 const LiCustom = styled.div`
 list-style-type:none;
@@ -62,20 +61,22 @@ export const DropDown = (props) => {
                         <span>Settings</span>
                     </LiCustom>
                 </UlCustom>
+
             </DropDownMenu>
             : null
         }
-        <ModalCustom
-            open={isModalOpen}
-        >
 
+        <Modal
+            title='Exit'
+            isOpen={isModalOpen}
+            onClose={() => setModalOpen(false)}
+        >
             <ConfirmationButton
-                confirmButtonText={'Вийти'}
+                confirmButtonText={'Exit'}
                 confirmButtonOnClick={() => exit()}
-                dismissButtonText={'Скасувати'}
+                dismissButtonText={'Cancel'}
                 dismissButtonOnClick={() => setModalOpen(false)}
             />
-
-        </ModalCustom>
+        </Modal>
     </>
 }

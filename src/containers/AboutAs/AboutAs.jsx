@@ -15,6 +15,7 @@ flex-direction:column;
 align-items:center;
 justify-content:center;
 `;
+
 const ContentWrapper = styled.div`
 width:100%;
 min-height:200px;
@@ -22,18 +23,21 @@ display:flex;
 flex-direction:row;
 justify-content:space-around;
 `;
+
 const TextBlock = styled.div`
 width:40%;
 min-height:400px;
 padding:16px;
 font-family:monospace;
 `;
+
 const ImageBlock = styled.img`
 width:40%;
 height:400px;
 `;
+
 export const AboutAs = (props) => {
-    return <>
+    return (
         <Wrapper>
             <Link to="/" style={{ textDecoration: 'none' }}> <H4><BackIcon /> Повернутися назад</H4></Link>
             <div>
@@ -43,15 +47,10 @@ export const AboutAs = (props) => {
                 <TextBlock>
                     <H3>
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores maiores expedita a sed architecto magnam minus autem excepturi vitae, ut deserunt velit animi voluptatem error placeat. Perspiciatis, sit ex facilis amet ipsa sed eligendi accusantium corporis labore modi, expedita nostrum autem esse quos iusto eos atque? Veniam explicabo distinctio adipisci!
-</H3>
+                    </H3>
                 </TextBlock>
-                <ImageBlock src={aboutUs}>
-                </ImageBlock>
-
+                <ImageBlock src={aboutUs} />
             </ContentWrapper>
         </Wrapper>
-
-
-
-    </>
+    )
 }

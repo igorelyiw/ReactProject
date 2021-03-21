@@ -2,7 +2,7 @@ import React from 'react';
 
 import { useFormik } from 'formik';
 import styled from 'styled-components';
-import { BigButton } from '../Buttons/Buttons';
+import { BigButton } from '../../components/Buttons/Buttons';
 
 const InputCustom = styled.input`
 width:300px;

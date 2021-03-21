@@ -4,7 +4,7 @@ import './App.css';
 
 import { Header } from './components/Header';
 import { Profile } from './components/Profile';
-import { AuthPage } from './containers/AuthPage/AuthPage';
+import { AuthPage } from './containers/AuthPage/Auth';
 
 import styled from 'styled-components';
 
