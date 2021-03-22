@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 import styled from 'styled-components';
 import { SmallButton } from '../../components';
 
-import { SignupForm } from './AuthForm';
-import { RegForm } from './RegForm';
+import { SignupForm,RegistrationForm  } from './index';
 
 const AuthPageWrapper = styled.div`
 display:flex;
@@ -31,17 +30,17 @@ const ButtonWrapper = styled.div`
 display:flex;
 `;
 export const AuthPage = (props) => {
-    const [isActiveForm, setIsActiveForm] = useState(false)
+    const [isActiveForm, setIsActiveForm] = React.useState(false)
     return (
         <Wrapper>
             <AuthPageWrapper>
                 <ButtonWrapper>
-                    <SmallButton isActiv={!isActiveForm} onClick={() => setIsActiveForm(false)}>Sign Up</SmallButton>
-                    <SmallButton isActiv={isActiveForm} onClick={() => setIsActiveForm(true)}>Sign In</SmallButton>
+                    <SmallButton isActive={!isActiveForm} onClick={() => setIsActiveForm(false)}>Sign Up</SmallButton>
+                    <SmallButton isActive={isActiveForm} onClick={() => setIsActiveForm(true)}>Sign In</SmallButton>
                 </ButtonWrapper>
                 {isActiveForm
                     ? <SignupForm />
-                    : <RegForm />
+                    : <RegistrationForm />
                 }
             </AuthPageWrapper>
             <Link to="/about" style={{ textDecoration: 'none' }}>About As</Link>

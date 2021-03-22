@@ -13,7 +13,7 @@ cursor:pointer;
 export const SmallButton = styled.button`
 min-width:${props => props.width || '100px'};
 color:${props => props.color || 'white'};
-border-bottom:${props => props.isActiv ? "4px solid white" : null};
+border-bottom:${props => props.isActive ? "4px solid white" : null};
 line-height:32px;
 font-size:18px;
 margin-left:10px;

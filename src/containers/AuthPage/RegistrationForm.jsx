@@ -1,6 +1,6 @@
 import React from 'react';
-
 import { useFormik } from 'formik';
+
 import styled from 'styled-components';
 import { BigButton } from '../../components';
 
@@ -26,7 +26,7 @@ justify-content:center;
 align-items:center;
 `;
 
-export const RegForm = () => {
+export const RegistrationForm = () => {
   const formik = useFormik({
     initialValues: {
       email: '',

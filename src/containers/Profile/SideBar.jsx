@@ -1,19 +1,21 @@
 import React from 'react';
-
 import styled from 'styled-components';
 
-import { Input } from './Input';
+import { AddIcon, H3, Input, SortIcon } from '../../components';
 
 const SideBarWrapper = styled.div`
 width:20%;
 border-right:1px solid black;
-`
+`;
+
 export const SideBar = (props) => {
     return (
         <SideBarWrapper>
             <div>
-                + Add User
-</div>
+                <H3>
+                    <AddIcon /> Add User
+                   </H3>
+            </div>
             <form>
                 <Input />
             </form>
@@ -21,8 +23,10 @@ export const SideBar = (props) => {
                 <Input />
             </form>
             <div>
-                Sortable
-</div>
+                <H3>
+                    <SortIcon />  Sortable
+                 </H3>
+            </div>
         </SideBarWrapper>
     )
 }

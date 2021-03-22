@@ -1,13 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useDispatch } from 'react-redux';
 
 import styled from 'styled-components';
 import { isAuthModalClose } from '../store/authSlice';
 
-import { Modal } from './Modal';
-import { ConfirmationButton, SmallButton } from './Buttons';
+import { ConfirmationButton, SmallButton,Modal } from './index';
 import { DownIcon, LogOutIcon, UpIcon } from './icon';
-
 
 const DropDownMenu = styled.div`
 display:flex;
@@ -22,59 +20,58 @@ font-size:16px;
 `;
 const LiCustom = styled.div`
 list-style-type:none;
+
 &:hover {
          border-bottom:2px solid black;
              }
 `
 const UlCustom = styled.ul`
 padding:0;
-
   `;
+
 export const DropDown = (props) => {
-    const [isShow, setShow] = useState(false);
-    const onToggleClick = () => setShow(!isShow);
+    const [isShow, setIsShow] = React.useState(false);
+    const onToggleClick = () => setIsShow(!isShow);
     const openLogOut = () => {
         onToggleClick()
     }
-    const [isModalOpen, setModalOpen] = useState(false);
+    const [isModalOpen, setIsModalOpen] = React.useState(false);
     const dispatch = useDispatch();
     const exit = () => {
         dispatch(isAuthModalClose())
-        setModalOpen(false)
+        setIsModalOpen(false)
     }
+    const UserName="Igor Elyiw";
     return <>
         <SmallButton onClick={() => onToggleClick()}>
             {isShow
                 ? <UpIcon />
                 : <DownIcon />
             }
-            Igor Elyiw
+            {UserName}
                         </SmallButton>
-        {isShow
-            ? <DropDownMenu>
+        {isShow &&
+            <DropDownMenu>
                 <UlCustom>
                     <LiCustom onClick={() => openLogOut()}>
-                        <LogOutIcon />  <span onClick={() => setModalOpen(true)} >Log out</span>
+                        <LogOutIcon />  <span onClick={() => setIsModalOpen(true)} >Log out</span>
                     </LiCustom>
                     <LiCustom>
                         <span>Settings</span>
                     </LiCustom>
                 </UlCustom>
-
             </DropDownMenu>
-            : null
         }
-
         <Modal
             title='Exit'
             isOpen={isModalOpen}
-            onClose={() => setModalOpen(false)}
+            onClose={() => setIsModalOpen(false)}
         >
             <ConfirmationButton
-                confirmButtonText={'Exit'}
+                confirmButtonText='Exit'
                 confirmButtonOnClick={() => exit()}
-                dismissButtonText={'Cancel'}
-                dismissButtonOnClick={() => setModalOpen(false)}
+                dismissButtonText='Cancel'
+                dismissButtonOnClick={() => setIsModalOpen(false)}
             />
         </Modal>
     </>

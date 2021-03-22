@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUsers } from '../../store';
@@ -18,10 +18,11 @@ flex-wrap:wrap;
 export const UsersContainer = (props) => {
   const state = useSelector(state => state.auth);
   const dispatch = useDispatch();
-  useEffect(async () => {
+  React.useEffect(async () => {
     const response = await axios.get('https://jsonplaceholder.typicode.com/users');
     dispatch(getUsers(response.data));
   }, [])
+
   return (
     <Wrapper>
       {state.users.map(user =>
@@ -32,7 +33,6 @@ export const UsersContainer = (props) => {
           city={user.address.city}
           street={user.address.street}
           phoneNumber={user.phone}
-          callback={(rest) => null}
         />)}
     </Wrapper>
   )

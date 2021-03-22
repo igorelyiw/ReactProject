@@ -6,28 +6,24 @@ export const ButtonText = styled.span`
   letter-spacing: 0.75px;
   color: ${({ theme, isPrimary }) => isPrimary ? theme.colors.primary : theme.colors.black}
 `;
-
 export const H1 = styled.span`
   font-style: normal;
   ${({ isBold }) => isBold && 'font-weight: bold'};
   font-size: 34px;
   line-height: 44px;
 `;
-
 export const H2 = styled.span`
   font-style: normal;
   ${({ isBold }) => isBold && 'font-weight: bold'};
   font-size: 28px;
   line-height: 42px;
 `;
-
 export const H3 = styled.span`
   ${({ isBold }) => isBold && 'font-weight: bold'};
   font-size: 22px;
   line-height: 29px;
   letter-spacing: 0.0025em;
 `;
-
 export const H4 = styled.span`
   font-style: normal;
   ${({ isBold }) => isBold && 'font-weight: bold'};

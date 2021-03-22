@@ -1,8 +1,9 @@
 import React from 'react';
 
 import styled from 'styled-components';
-import { SideBar } from '../../components';
 import { UsersContainer } from '../Users';
+
+import { SideBar } from './index';
 
 const Wrapper = styled.div`
 display:flex;
