@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-
-import { CgLogOut as LogOutIcon } from 'react-icons/cg';
-import styled from 'styled-components';
-import { ConfirmationButton, SmallButton } from './Buttons/Buttons';
-import { IoIosArrowDown as DownIcon } from "react-icons/io";
-import { IoIosArrowUp as UpIcon } from "react-icons/io";
-import { Modal } from '../components/Modal';
 import { useDispatch } from 'react-redux';
+
+import styled from 'styled-components';
 import { isAuthModalClose } from '../store/authSlice';
+
+import { Modal } from './Modal';
+import { ConfirmationButton, SmallButton } from './Buttons';
+import { DownIcon, LogOutIcon, UpIcon } from './icon';
+
 
 const DropDownMenu = styled.div`
 display:flex;
@@ -19,7 +19,7 @@ z-index:3;
 background:white;
 border:1px solid black;
 font-size:16px;
-`
+`;
 const LiCustom = styled.div`
 list-style-type:none;
 &:hover {
@@ -29,8 +29,7 @@ list-style-type:none;
 const UlCustom = styled.ul`
 padding:0;
 
-
-  `
+  `;
 export const DropDown = (props) => {
     const [isShow, setShow] = useState(false);
     const onToggleClick = () => setShow(!isShow);

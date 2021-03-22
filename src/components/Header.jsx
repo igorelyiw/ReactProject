@@ -1,5 +1,7 @@
 import React from 'react';
+
 import styled from 'styled-components';
+
 import { H1, H3 } from './Text';
 import { DropDown } from './DropDown';
 
@@ -11,15 +13,16 @@ display:flex;
 align-items:baseline;
 justify-content:space-between;
 border:1px solid black;
-`
+`;
 const TitleHeader = styled(H1)`
 font-size:200%;
-`
+`;
 const AuthWrapper = styled(H3)`
 cursor:pointer;
-`
+`;
+
 export const Header = (props) => {
-    return <>
+    return (
         <HeaderBlock>
             <TitleHeader isBold>
                 Project-Demo
@@ -28,7 +31,5 @@ export const Header = (props) => {
                 <DropDown />
             </AuthWrapper>
         </HeaderBlock>
-
-
-    </>
+    )
 }

@@ -2,8 +2,7 @@ import React from 'react';
 
 import { useFormik } from 'formik';
 import styled from 'styled-components';
-
-import { BigButton } from '../../components/Buttons/Buttons';
+import { BigButton } from '../../components';
 
 const InputCustom = styled.input`
 width:315px;
@@ -18,14 +17,15 @@ line-height:15px;
 padding:8px;
 border-radius:5px;
 margin-top:24px;
-`
+`;
 const Wrapper = styled.form`
 width:500px;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
-`
+`;
+
 export const RegForm = () => {
   const formik = useFormik({
     initialValues: {

@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
+import { getUsers } from '../../store';
 
 import styled from 'styled-components';
+
 import { UserCard } from './UserCard';
-import { getUsers } from '../../store/authSlice';
 
 const Wrapper = styled.div`
 width:80%;
@@ -12,7 +13,8 @@ padding:32px;
 display:flex;
 justify-content:space-between;
 flex-wrap:wrap;
-`
+`;
+
 export const UsersContainer = (props) => {
   const state = useSelector(state => state.auth);
   const dispatch = useDispatch();

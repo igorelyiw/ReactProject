@@ -2,7 +2,7 @@ import React from 'react';
 
 import styled from 'styled-components';
 import userIcon from '../../assets/user.png';
-import { H3,H4 } from '../../components/Text';
+import { H3,H4 } from '../../components';
 
 const Wrapper = styled.div`
 display:flex;
@@ -17,25 +17,28 @@ border:2px solid black;
 border-radius:2%;
 line-height:0px;
 cursor:pointer;
+
 span{
       display:flex;
     justify-content:space-between;
     flex-wrap:wrap;
 }
+
 h4,h5{
  text-align:center;
 }
+
 &:hover{
     background:rgba(0,0,0,.7)
 }
-`
+`;
 const ImageBlock = styled.img`
     width:100px;
+   `;
    
-`
 export const UserCard = (props) => {
     const { name, email, city, street, phoneNumber, callback, rest } = props;
-    return <>
+    return (
         <Wrapper onClick={() => callback(rest)}>
             <ImageBlock src={userIcon} />
             <div>
@@ -47,6 +50,6 @@ export const UserCard = (props) => {
                 <span><p>Телефон:</p><p>{phoneNumber}</p></span>
             </div>
         </Wrapper>
-    </>
+    )
 }
 

@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import './App.css';
 
 import { Header } from './components/Header';
-import { Profile } from './components/Profile';
+import { Profile } from './containers/Profile/Profile';
 import { AuthPage } from './containers/AuthPage/Auth';
 
 import styled from 'styled-components';

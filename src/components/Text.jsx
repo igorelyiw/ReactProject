@@ -1,6 +1,4 @@
 import styled from 'styled-components';
-import React from 'react'
-
 
 export const ButtonText = styled.span`
   font-size: 16px;

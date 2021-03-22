@@ -1,8 +1,10 @@
 import React from 'react';
-import styled from "styled-components";
 import ReactDOM from 'react-dom';
-import {H1} from './Text';
-import { ImCross as CrossIcon } from 'react-icons/im';
+
+import styled from "styled-components";
+
+import { H1 } from './Text';
+import { CrossIcon } from './icon';
 
 const Wrapper = styled.div`
 position: fixed; 
@@ -19,7 +21,7 @@ position: fixed;
   justify-content:center;
   align-items:center;
 `;
-const ModalContent=styled.div`
+const ModalContent = styled.div`
 width:300px;
 min-height:200px;
 background-color: #fefefe;
@@ -31,10 +33,10 @@ background-color: #fefefe;
   align-items:center;
   position:relative;
    `;
-const Title =styled(H1)`
+const Title = styled(H1)`
 text-align:center;
 `;
-const CrossIconWrapper =styled.div`
+const CrossIconWrapper = styled.div`
 cursor:pointer;
 position:absolute;
 top:5px;
@@ -55,7 +57,7 @@ export const Modal = (props) => {
                             {children}
                             {isClosable && (
                                 <CrossIconWrapper onClick={onClose}>
-                                    <CrossIcon/>
+                                    <CrossIcon />
                                 </CrossIconWrapper>
                             )}
                         </ModalContent>

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { useFormik } from 'formik';
 import styled from 'styled-components';
-import { BigButton } from '../../components/Buttons/Buttons';
+import { BigButton } from '../../components';
 
 const InputCustom = styled.input`
 width:300px;
@@ -17,7 +17,8 @@ display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
-`
+`;
+
 export const SignupForm = () => {
   const formik = useFormik({
     initialValues: {
@@ -48,7 +49,6 @@ export const SignupForm = () => {
           onChange={formik.handleChange}
           value={formik.values.password}
           placeholder={'Введіть ваш пароль'}
-
         />
       </div>
       <BigButton type="submit">Увійти</BigButton>

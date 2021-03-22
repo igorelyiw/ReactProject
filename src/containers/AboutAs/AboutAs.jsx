@@ -1,9 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
 
-import { IoArrowUndoCircle as BackIcon } from "react-icons/io5";
-import { H1, H3, H4, TextGradient } from '../../components/Text';
+import styled from 'styled-components';
+import { BackIcon, H3, H4, TextGradient } from '../../components';
 import aboutUs from '../../assets/aboutUs.jpg'
 
 const Wrapper = styled.div`
@@ -15,7 +14,6 @@ flex-direction:column;
 align-items:center;
 justify-content:center;
 `;
-
 const ContentWrapper = styled.div`
 width:100%;
 min-height:200px;
@@ -23,19 +21,16 @@ display:flex;
 flex-direction:row;
 justify-content:space-around;
 `;
-
 const TextBlock = styled.div`
 width:40%;
 min-height:400px;
 padding:16px;
 font-family:monospace;
 `;
-
 const ImageBlock = styled.img`
 width:40%;
 height:400px;
 `;
-
 export const AboutAs = (props) => {
     return (
         <Wrapper>
