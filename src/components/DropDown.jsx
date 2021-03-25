@@ -54,10 +54,10 @@ export const DropDown = (props) => {
             <DropDownMenu>
                 <UlCustom>
                     <LiCustom onClick={() => openLogOut()}>
-                        <LogOutIcon />  <span onClick={() => setIsModalOpen(true)} >Log out</span>
+                          <div onClick={() => setIsModalOpen(true)} ><LogOutIcon />Log out</div>
                     </LiCustom>
                     <LiCustom>
-                        <span>Settings</span>
+                        <div>Settings</div>
                     </LiCustom>
                 </UlCustom>
             </DropDownMenu>
