@@ -30,6 +30,12 @@ export const H4 = styled.span`
   font-size: 20px;
   line-height: 26px;
 `;
+export const H5 = styled.span`
+  font-style: normal;
+  ${({ isBold }) => isBold && 'font-weight: bold'};
+  font-size: 18px;
+  line-height: 23px;
+`;
 export const TextGradient = styled.p`
 font-size: 2em;
 background: linear-gradient(135deg, #12BCB0 20%, #FABE0E 70%);

@@ -31,13 +31,13 @@ const ImageBlock = styled.img`
    `;
 
 export const UserCard = (props) => {
-    const { name, email, city, street, phoneNumber, callback } = props;
+    const { name, email, city, street, phoneNumber,onCardClick } = props;
     return (
-        <Wrapper >
+        <Wrapper onClick={()=>onCardClick()} >
             <ImageBlock src={userIcon} />
             <div>
-                <H3>{name ? name : 'Username'}</H3>
-                <H4>{city}</H4>
+                <H3>{name ? name : 'Username'}</H3><br/>
+                <H4>From:{city}</H4>
                 <hr />
                 <Span><p>Пошта:</p><p>{email}</p></Span>
                 <Span><p>Вулиця:</p><p>{street}</p></Span>

@@ -21,6 +21,7 @@ const Wrapper = styled.div`
 display:flex;
 flex-direction:column;
 align-items:center;
+margin:100px auto;
 box-shadow:    inset 0 0 10px #000000;
 width:800px;
 height:600px;

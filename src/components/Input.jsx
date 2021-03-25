@@ -2,7 +2,7 @@ import React from 'react';
 
 import styled from 'styled-components';
 
-const InputWrapper = styled.input`
+const Wrapper = styled.input`
 width:${props => props.width || '200px'}
 font-size: 18px;
   padding: 10px;
@@ -18,6 +18,6 @@ font-size: 18px;
 
 export const Input = (props) => {
   return (
-    <InputWrapper />
+    <Wrapper />
   )
 }

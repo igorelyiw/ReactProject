@@ -3,8 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 export const authSlice = createSlice({
     name: 'auth',
     initialState: {
-        isAuth: true,
-        users: []
+        isAuth: true       
     },
     reducers: {
         isAuthModalOpen: (state) => {
@@ -12,11 +11,8 @@ export const authSlice = createSlice({
         },
         isAuthModalClose: (state) => {
             state.isAuth = false
-        },
-        getUsers: (state, action) => {
-            state.users = action.payload
         }
     }
 })
-export const { isAuthModalOpen, isAuthModalClose, getUsers } = authSlice.actions;
+export const { isAuthModalOpen, isAuthModalClose } = authSlice.actions;
 export default authSlice.reducer;

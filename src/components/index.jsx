@@ -4,6 +4,8 @@ export * from './Input';
 export * from './Modal';
 export * from './Text';
 export * from './icon';
+export * from './Preloader';
+
 
 
 
